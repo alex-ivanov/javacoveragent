@@ -1,0 +1,26 @@
+<project name="Code Coverage tester" default="all">
+  <target name="all" depends="compile,jar"/>
+
+  <target name="compile" description="compile classes">
+    <delete dir="target" />
+    <mkdir dir="target" />
+	<mkdir dir="target/source"/>
+    <javac source="1.5" srcdir="../src/java" destdir="target/source" debug="false"
+              optimize="true" verbose="false" classpath="../lib/asm-3.1/asm-all-3.1.jar">
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile" description="create agent jar">
+	<taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask" classpath="../lib/jarjar/jarjar-1.0.jar"/>
+    <mkdir dir="target/dist"/>
+	<manifest file="MANIFEST.MF">
+		<attribute name="Premain-Class" value="ru.greeneyes.codeCoverage.codeAssist.CoverageAgent"/>
+	</manifest>
+	<jar basedir="target/source" destfile="target/dist/agent.jar" manifest="MANIFEST.MF"/>
+	<jarjar jarfile="target/dist/agent.jar" manifest="MANIFEST.MF">
+		<fileset dir="target/source"/>
+		<zipfileset src="../lib/asm-3.1/asm-all-3.1.jar"/>
+		<rule pattern="org.objectweb.**" result="ru.greeneyes.asm.@1"/>
+    </jarjar>
+  </target>
+</project>

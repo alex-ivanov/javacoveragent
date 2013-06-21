@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/60/trunk/INITAL/test/java/ru/greeneyes/codeCoverage/codeAssist
+END
+ClassUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/59/trunk/INITAL/test/java/ru/greeneyes/codeCoverage/codeAssist/ClassUtils.java
+END
+SampleClass.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/59/trunk/INITAL/test/java/ru/greeneyes/codeCoverage/codeAssist/SampleClass.java
+END
+ClassTransformerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/60/trunk/INITAL/test/java/ru/greeneyes/codeCoverage/codeAssist/ClassTransformerTest.java
+END

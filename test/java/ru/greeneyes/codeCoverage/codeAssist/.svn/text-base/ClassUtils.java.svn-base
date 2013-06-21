@@ -1,0 +1,51 @@
+package ru.greeneyes.codeCoverage.codeAssist;
+
+import java.net.URL;
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.lang.instrument.IllegalClassFormatException;
+
+/**
+ * User: dima
+ * Date: Feb 8, 2009
+ * Time: 4:26:15 PM
+ */
+public class ClassUtils {
+	private ClassUtils() {
+	}
+
+	public static byte[] classAsBytes(final String className) throws ClassNotFoundException {
+		try {
+			URL resource = ClassUtils.class.getClassLoader().getResource(convertClassNameToFileName(className));
+			BufferedInputStream stream = new BufferedInputStream(resource.openStream());
+			byte[] result = new byte[resource.openConnection().getContentLength()];
+
+			int i;
+			int counter = 0;
+			while ((i = stream.read()) != -1) {
+				result[counter] = (byte) i;
+				counter++;
+			}
+
+			return result;
+		} catch (IOException e) {
+			throw new ClassNotFoundException("", e);
+		}
+	}
+
+	private static String convertClassNameToFileName(final String className) {
+		return className.replace(".", "/") + ".class";
+	}
+
+	public static Class createClass(byte[] bytes) throws IllegalClassFormatException {
+		return MyClassLoader.instance.createClass(bytes);
+	}
+
+	private static final class MyClassLoader extends ClassLoader {
+		public static final MyClassLoader instance = new MyClassLoader();
+
+		public Class<?> createClass(byte[] bytes) throws IllegalClassFormatException {
+			return defineClass(null, bytes, 0, bytes.length);
+		}
+	}
+}
