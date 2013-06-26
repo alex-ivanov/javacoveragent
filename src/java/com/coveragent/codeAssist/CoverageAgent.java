@@ -47,7 +47,6 @@ public class CoverageAgent {
 		StatisticsHolder holder = new ThreadLocalInterceptor();
 
 		ClassTransformer transformer = new ClassTransformer(holder);
-		transformer.setCoverageLine(configuration.isCoverageLines());
 		transformer.setCoverageMethod(configuration.isCoverageMethods());
 		transformer.setIncludePrefix(configuration.getIncludePrefix());
 		transformer.setExcludePrefix(configuration.getExcludePrefix());

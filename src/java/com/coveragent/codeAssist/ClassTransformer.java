@@ -15,7 +15,6 @@ import org.objectweb.asm.ClassWriter;
  * @date 26.01.2009 15:10:31
  */
 public class ClassTransformer implements ClassFileTransformer {
-	private volatile boolean coverageLine = false;
 	private volatile boolean coverageMethod = true;
 
 	private Set<String> includePrefix = Collections.emptySet();
@@ -59,10 +58,6 @@ public class ClassTransformer implements ClassFileTransformer {
 			}
 		}
 		return include;
-	}
-
-	public void setCoverageLine(boolean coverageLine) {
-		this.coverageLine = coverageLine;
 	}
 
 	public void setCoverageMethod(boolean coverageMethod) {
