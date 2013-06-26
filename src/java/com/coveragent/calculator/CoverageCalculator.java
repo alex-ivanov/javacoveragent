@@ -24,7 +24,7 @@ public class CoverageCalculator {
 	}
 
 
-	private static final Interceptor interceptor = new ThreadLocalInterceptor();
+	public static final ThreadLocalInterceptor interceptor = new ThreadLocalInterceptor();
 
 	/**
 	 * The only one entry point for all generated code.

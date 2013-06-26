@@ -84,6 +84,16 @@ public class ThreadLocalInterceptor implements Interceptor, StatisticsSink, Stat
 		return methodIdGenerator.get();
 	}
 
+	public TLongSet visitedMethodSet() {
+		return allMethodsVisitSet;
+	}
+
+	public synchronized void reset() {
+		idToObjectMap.clear();
+		reversIdMap.clear();
+		methodIdGenerator.set(0);
+	}
+
 	private static class ClazzMethodHolder {
 		private final String clazz;
 		private final String method;
