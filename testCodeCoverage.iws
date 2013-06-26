@@ -2,52 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="352b989f-8297-4c9f-b66d-6016fbf13efa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/trove/trove-3.0.3.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/CoverageCalculator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/Interceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/MutableLong.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/StatisticsHolder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/threadLocal/StatisticsSink.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/TestThreadTransformation.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/threadLocal/ThreadLocalInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/utils/ThreadLocalUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/java/com/coveragent/utils/ThreadLocalUtilsTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/coveragent/calculator/threadLocal/ThreadLocalVisitStatistics.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/CodeCoverageStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeEntry.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeQueueCleaner.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeQueueCleanerManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeStatistics.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/InvokeType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/calculator/MethodNameStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/CoverageAnnotationVisitor.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/ClassTransformer.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/Configuration.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/Configuration.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/CoverageAgent.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageAgent.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/CoverageClassVisitor.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageClassVisitor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/CoverageMethodVisitor.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageMethodVisitor.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/codeAssist/StatisticsExporterHook.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/StatisticsExporterHook.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/exporter/Exporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/Exporter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/exporter/SimpleConsoleExporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleConsoleExporter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/ru/greeneyes/codeCoverage/exporter/SimpleFileExporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleFileExporter.java" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/.svn/all-wcprops" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/.svn/all-wcprops" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/.svn/entries" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/.svn/entries" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/.svn/text-base/ClassTransformerTest.java.svn-base" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/.svn/text-base/ClassTransformerTest.java.svn-base" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/.svn/text-base/ClassUtils.java.svn-base" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/.svn/text-base/ClassUtils.java.svn-base" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/.svn/text-base/SampleClass.java.svn-base" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/.svn/text-base/SampleClass.java.svn-base" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/ClassTransformerTest.java" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/ClassTransformerTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/ClassUtils.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/utils/ClassUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/java/ru/greeneyes/codeCoverage/codeAssist/SampleClass.java" afterPath="$PROJECT_DIR$/test/java/com/coveragent/codeAssist/SampleClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ide/Coverage test.iml" afterPath="$PROJECT_DIR$/ide/Coverage test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/java/TestClass.java" afterPath="$PROJECT_DIR$/test/java/TestClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/build.xml" afterPath="$PROJECT_DIR$/build/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCodeCoverage.ipr" afterPath="$PROJECT_DIR$/testCodeCoverage.ipr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/Configuration.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/Configuration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageAgent.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageAgent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageClassVisitor.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageClassVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageMethodVisitor.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/CoverageMethodVisitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/exporter/Exporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/Exporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleConsoleExporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleConsoleExporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleFileExporter.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/exporter/SimpleFileExporter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/StatisticsExporterHook.java" afterPath="$PROJECT_DIR$/src/java/com/coveragent/codeAssist/StatisticsExporterHook.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testCodeCoverage.iws" afterPath="$PROJECT_DIR$/testCodeCoverage.iws" />
     </list>
     <ignored path="testCodeCoverage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="352b989f-8297-4c9f-b66d-6016fbf13efa" time="1372205964688" ignored="false" />
+    <file path="/Dummy.txt" changelist="352b989f-8297-4c9f-b66d-6016fbf13efa" time="1372215515208" ignored="false" />
     <file path="/GetCurrentThreadTest.java" changelist="352b989f-8297-4c9f-b66d-6016fbf13efa" time="1371779733300" ignored="false" />
     <file path="/build.xml" changelist="352b989f-8297-4c9f-b66d-6016fbf13efa" time="1372125113075" ignored="false" />
     <file path="/SampleClass.java" changelist="352b989f-8297-4c9f-b66d-6016fbf13efa" time="1371860506223" ignored="false" />
@@ -208,10 +181,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassTransformer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ClassTransformer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="16" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="-0.12224449">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -294,10 +267,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThreadLocalUtilsTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ThreadLocalUtilsTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/java/com/coveragent/utils/ThreadLocalUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.63126254">
+            <state line="47" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#288#356#0" expanded="true" />
@@ -1146,6 +1119,11 @@
       <created>1371778494341</created>
       <updated>1371778494341</updated>
     </task>
+    <task id="LOCAL-00001" summary="better implementation on ThreadLocal">
+      <created>1372215533867</created>
+      <updated>1372215533868</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1169,7 +1147,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6706707" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.6706707" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932934" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1220,7 +1198,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="better implementation on ThreadLocal" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1234,6 +1212,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="better implementation on ThreadLocal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1263,15 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="17" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1375,7 +1345,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/java/com/coveragent/utils/ThreadLocalUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.63126254">
+        <state line="47" column="0" selection-start="1139" selection-end="1139" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#288#356#0" expanded="true" />
@@ -1385,6 +1355,15 @@
             <element signature="e#776#1019#0" expanded="true" />
             <element signature="e#1013#1014#0" expanded="true" />
             <element signature="e#1512#1520#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/coveragent/codeAssist/ClassTransformer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="13" selection-start="432" selection-end="432" vertical-scroll-proportion="-0.12224449">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
