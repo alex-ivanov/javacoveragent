@@ -38,7 +38,8 @@ public class CoverageAgent {
 
 		System.err.println("WARNING! Code coverage is enabled");
 		if (configuration.isCoverageLines()) {
-			System.err.println("Coverage enabled for lines.");
+			System.err.println("Coverage enabled for lines is not supported yet.");
+			System.exit(1);
 		}
 		if (configuration.isCoverageMethods()) {
 			System.err.println("Coverage enabled for methods.");

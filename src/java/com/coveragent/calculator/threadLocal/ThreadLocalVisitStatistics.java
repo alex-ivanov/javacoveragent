@@ -1,12 +1,7 @@
 package com.coveragent.calculator.threadLocal;
 
-import com.coveragent.calculator.MutableLong;
-import gnu.trove.impl.hash.TLongHash;
 import gnu.trove.set.TLongSet;
 import gnu.trove.set.hash.TLongHashSet;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * author: alex
