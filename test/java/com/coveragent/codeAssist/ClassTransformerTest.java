@@ -45,7 +45,7 @@ public class ClassTransformerTest {
 		assertEquals(2, set.size());
 		assertEquals("method()V", statisticsHolder.methodName(2));
 		assertEquals(SAMPLE_CLASS_NAME, statisticsHolder.className(2));
-		assertEquals("method()V", statisticsHolder.methodName(2));
+		assertEquals("<init>()V", statisticsHolder.methodName(1));
 		assertEquals(SAMPLE_CLASS_NAME, statisticsHolder.className(1));
 		statisticsHolder.reset();
 	}
