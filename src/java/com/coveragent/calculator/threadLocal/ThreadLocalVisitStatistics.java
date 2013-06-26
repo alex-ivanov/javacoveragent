@@ -1,5 +1,6 @@
 package com.coveragent.calculator.threadLocal;
 
+import gnu.trove.TCollections;
 import gnu.trove.set.TLongSet;
 import gnu.trove.set.hash.TLongHashSet;
 
@@ -9,10 +10,8 @@ import gnu.trove.set.hash.TLongHashSet;
  */
 public class ThreadLocalVisitStatistics {
 	private final TLongSet set = new TLongHashSet();
-	private final StatisticsSink sink;
 
-	public ThreadLocalVisitStatistics(StatisticsSink sink) {
-		this.sink = sink;
+	public ThreadLocalVisitStatistics() {
 	}
 
 	public void visitEntry(long id) {
@@ -20,12 +19,6 @@ public class ThreadLocalVisitStatistics {
 	}
 
 	public TLongSet visitSet() {
-		return set;
-	}
-
-	@Override
-	protected void finalize() throws Throwable {
-		sink.sink(this);
-		super.finalize();
+		return TCollections.unmodifiableSet(set);
 	}
 }

@@ -8,21 +8,18 @@ import gnu.trove.map.hash.TLongObjectHashMap;
 import gnu.trove.set.TLongSet;
 import gnu.trove.set.hash.TLongHashSet;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * author: alex
  * date  : 6/24/13
  */
-public class ThreadLocalInterceptor implements Interceptor, StatisticsSink, StatisticsHolder {
+public class ThreadLocalInterceptor implements Interceptor, StatisticsHolder {
 	private final ThreadLocal<ThreadLocalVisitStatistics> HOLDER = new ThreadLocal<ThreadLocalVisitStatistics>() {
 		@Override
 		protected ThreadLocalVisitStatistics initialValue() {
-			return new ThreadLocalVisitStatistics(ThreadLocalInterceptor.this);
+			return createStatisticsHolder();
 		}
 	};
 
@@ -33,20 +30,22 @@ public class ThreadLocalInterceptor implements Interceptor, StatisticsSink, Stat
 	private final Map<ClazzMethodHolder, Long> reversIdMap = new HashMap<ClazzMethodHolder, Long>();
 	private final TLongObjectMap<ClazzMethodHolder> idToObjectMap = new TLongObjectHashMap<ClazzMethodHolder>();
 
+	private final Set<ThreadLocalVisitStatistics> allKnownStatistics = new HashSet<ThreadLocalVisitStatistics>();
+
 	public void methodEntry(long methodId) {
 		HOLDER.get().visitEntry(methodId);
 	}
 
 	@Override
-	public synchronized void sink(ThreadLocalVisitStatistics statistics) {
-		allMethodsVisitSet.addAll(statistics.visitSet());
+	public synchronized void grabAllStatistics() {
+		for (ThreadLocalVisitStatistics statistics : allKnownStatistics)
+			allMethodsVisitSet.addAll(statistics.visitSet());
 	}
 
-	@Override
-	public synchronized void grabAllStatistics() {
-		List<ThreadLocalVisitStatistics> data = ThreadLocalUtils.allExistedThreadLocalValues(HOLDER);
-		for (ThreadLocalVisitStatistics statistics : data)
-			allMethodsVisitSet.addAll(statistics.visitSet());
+	private ThreadLocalVisitStatistics createStatisticsHolder() {
+		ThreadLocalVisitStatistics holder = new ThreadLocalVisitStatistics();
+		allKnownStatistics.add(holder);
+		return holder;
 	}
 
 	@Override

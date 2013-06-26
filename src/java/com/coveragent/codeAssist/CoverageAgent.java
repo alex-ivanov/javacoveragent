@@ -1,7 +1,7 @@
 package com.coveragent.codeAssist;
 
+import com.coveragent.calculator.CoverageCalculator;
 import com.coveragent.calculator.StatisticsHolder;
-import com.coveragent.calculator.threadLocal.ThreadLocalInterceptor;
 import com.coveragent.exporter.Exporter;
 import com.coveragent.exporter.SimpleConsoleExporter;
 import com.coveragent.exporter.SimpleFileExporter;
@@ -45,7 +45,7 @@ public class CoverageAgent {
 			System.err.println("Coverage enabled for methods.");
 		}
 
-		StatisticsHolder holder = new ThreadLocalInterceptor();
+		StatisticsHolder holder = CoverageCalculator.interceptor;
 
 		ClassTransformer transformer = new ClassTransformer(holder);
 		transformer.setCoverageMethod(configuration.isCoverageMethods());

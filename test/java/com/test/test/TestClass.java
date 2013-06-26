@@ -15,13 +15,3 @@ public class TestClass {
 		System.err.println("Time to recalc:" + (System.nanoTime() - nanoTime));
 	}
 }
-//1501469017
-//334671629
-//363974836
-//377381442
-//415138186
-//417749486
-//390235629
-//
-//-javaagent:./build/target/dist/agent.jar
-//

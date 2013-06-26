@@ -20,11 +20,6 @@ import java.util.Map;
 public class SimpleFileExporter implements Exporter {
 
 	public void export(StatisticsHolder statisticsHolder, Configuration configuration, Instrumentation instrument) {
-		Class[] classes = instrument.getAllLoadedClasses();
-		Map<String, Class> classMap = new HashMap<String, Class>();
-		for (Class aClass : classes) {
-			classMap.put(aClass.getName(), aClass);
-		}
 		String fileName = configuration.getExportFileName();
 		File f = new File(fileName);
 		try {
@@ -42,13 +37,13 @@ public class SimpleFileExporter implements Exporter {
 				}
 			}
 			FileWriter writer = new FileWriter(f);
-			writer.append("class name;method name and description;is visited?\n");
+			writer.append("class name|method name and description|is visited?\n");
 			long lastMethodId = statisticsHolder.lastMethodId();
-			for (int i = 0; i < lastMethodId; i++) {
+			for (int i = 1; i <= lastMethodId; i++) {
 				String clazz = statisticsHolder.className(i);
 				String methodName = statisticsHolder.methodName(i);
 
-				writer.append(clazz).append(";").append(methodName).append(";").append(";");
+				writer.append(clazz).append("|").append(methodName).append("|");
 				writer.append(statisticsHolder.isVisited(i) ? "yes" : "no");
 				writer.append("\n");
 			}
