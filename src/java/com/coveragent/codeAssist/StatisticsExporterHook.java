@@ -16,7 +16,7 @@ public class StatisticsExporterHook extends Thread {
 	private Instrumentation instrumentation;
 
 	public StatisticsExporterHook(StatisticsHolder invokeStatistics, Exporter exporter,
-								  Configuration configuration, Instrumentation instrumentation)
+								Configuration configuration, Instrumentation instrumentation)
 	{
 		this.invokeStatistics = invokeStatistics;
 		this.exporter = exporter;

@@ -18,6 +18,7 @@ import java.util.Properties;
  * @author ivanalx
  * @date 26.01.2009 15:09:11
  */
+@SuppressWarnings("UnusedDeclaration")
 public class CoverageAgent {
 	private static final Map<String, Exporter> exporters = new HashMap<String, Exporter>();
 	static {

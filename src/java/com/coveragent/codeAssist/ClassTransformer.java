@@ -36,7 +36,7 @@ public class ClassTransformer implements ClassFileTransformer {
 			ClassReader reader = new ClassReader(classfileBuffer);
 			ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
 
-			reader.accept(new CoverageClassVisitor(statisticsHolder, writer, className, coverageMethod, coverageLine),
+			reader.accept(new CoverageClassVisitor(statisticsHolder, writer, className, coverageMethod),
 					ClassReader.EXPAND_FRAMES);
 			return writer.toByteArray();
 		} else {

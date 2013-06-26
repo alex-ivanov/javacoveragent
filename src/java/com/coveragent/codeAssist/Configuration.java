@@ -19,11 +19,11 @@ public class Configuration {
 
 	private final Set<String> includePrefix;
 	private final Set<String> excludePrefix;
-	private boolean coverageLines;
-	private boolean coverageMethods;
-	private String exporterName;
-	private String fileName;
-	private String renamePattern;
+	private final boolean coverageLines;
+	private final boolean coverageMethods;
+	private final String exporterName;
+	private final String fileName;
+	private final String renamePattern;
 
 	public Configuration(Properties properties) {
 		coverageLines = Boolean.valueOf(properties.getProperty(INCLUDE_LINES, "false"));

@@ -15,17 +15,15 @@ public class CoverageClassVisitor extends ClassAdapter {
 	private final String className;
 
 	private final boolean allowMethodCoverage;
-	private final boolean allowLineCoverage;
 
 	public CoverageClassVisitor(StatisticsHolder statisticsHolder, ClassWriter writer,
-								String className, boolean allowMethodCoverage, boolean allowLineCoverage)
+								String className, boolean allowMethodCoverage)
 	{
 		super(writer);
 		this.statisticsHolder = statisticsHolder;
 
 		this.writer = writer;
 		this.className = className;
-		this.allowLineCoverage = allowLineCoverage;
 		this.allowMethodCoverage = allowMethodCoverage;
 	}
 
