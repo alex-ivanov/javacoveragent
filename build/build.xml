@@ -5,8 +5,8 @@
     <delete dir="target" />
     <mkdir dir="target" />
 	<mkdir dir="target/source"/>
-    <javac source="1.5" srcdir="../src/java" destdir="target/source" debug="false"
-              optimize="true" verbose="false" classpath="../lib/asm-3.1/asm-all-3.1.jar">
+    <javac source="1.5" srcdir="../src/java" destdir="target/source" debug="true"
+              optimize="true" verbose="false" classpath="../lib/asm-3.1/asm-all-3.1.jar;../lib/trove/trove-3.0.3.jar">
     </javac>
   </target>
 
@@ -14,13 +14,16 @@
 	<taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask" classpath="../lib/jarjar/jarjar-1.0.jar"/>
     <mkdir dir="target/dist"/>
 	<manifest file="MANIFEST.MF">
-		<attribute name="Premain-Class" value="ru.greeneyes.codeCoverage.codeAssist.CoverageAgent"/>
+		<attribute name="Premain-Class" value="com.coveragent.codeAssist.TestCoverageAgent"/>
+		<attribute name="Can-Redefine-Classes" value="true"/>
 	</manifest>
 	<jar basedir="target/source" destfile="target/dist/agent.jar" manifest="MANIFEST.MF"/>
 	<jarjar jarfile="target/dist/agent.jar" manifest="MANIFEST.MF">
 		<fileset dir="target/source"/>
 		<zipfileset src="../lib/asm-3.1/asm-all-3.1.jar"/>
-		<rule pattern="org.objectweb.**" result="ru.greeneyes.asm.@1"/>
+		<zipfileset src="../lib/trove/trove-3.0.3.jar"/>
+		<rule pattern="org.objectweb.**" result="com.coveragent.asm.@1"/>
+		<rule pattern="gnu.trove.**" result="com.coveragent.trove.@1"/>
     </jarjar>
   </target>
 </project>

@@ -1,4 +1,4 @@
-package ru.greeneyes.codeCoverage.codeAssist;
+package com.coveragent.codeAssist;
 
 /**
  * User: dima
@@ -7,7 +7,6 @@ package ru.greeneyes.codeCoverage.codeAssist;
  */
 public class SampleClass {
 	public void method() {
-		
-
+		System.out.println("Hello, world!");
 	}
 }

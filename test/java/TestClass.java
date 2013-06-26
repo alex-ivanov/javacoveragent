@@ -67,12 +67,11 @@ public class TestClass {
 			}
 		}
 		return System.nanoTime() - start;
-	} 
+	}
 
 	public static Result testResultInMultipleThread(Calculator instrumentTime, Calculator uninstrumentTime) {
 		return new Result(testThreaded(instrumentTime), testThreaded(uninstrumentTime));
 	}
-
 
 	public static void main(String[] args) {
 		TimeTestDemo timeTestDemo = new TimeTestDemo();
@@ -86,9 +85,10 @@ public class TestClass {
 		int number = 0;
 		for (Result result : results) {
 			number++;
-			averageLossTime = (averageLossTime * (number - 1)  + ((double)(result.getInstrumentTime() - result.getUnInstrumentTime()))/result.getUnInstrumentTime())/ number;
+			averageLossTime = (averageLossTime * (number - 1) +
+					((double) (result.getInstrumentTime() - result.getUnInstrumentTime())) / result.getUnInstrumentTime()) / number;
 		}
-		System.out.println("Average loss: " + averageLossTime*100);
+		System.out.println("Average loss: " + averageLossTime * 100);
 		System.out.println(results);
 	}
 }
