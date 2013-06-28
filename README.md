@@ -15,6 +15,8 @@ Just add jar file as an agent for your JVM instance. Something like this:
 
 
 coverage.properties file contains a configuration for your run. Here is an example:
+
+
 		OPTION.METHODS.INCLUDE=true
 
 		EXPORTER.TYPE=simple.file
